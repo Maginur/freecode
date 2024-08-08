@@ -1,9 +1,5 @@
-/*Step 77
-JavaScript also has support for multi-line comments. A multi-line comment starts with / * and ends with * /.
-
-Unlike a single-line comment, a multi-line comment will encapsulate multiple lines.
-
-Use / * and * / to turn your current for loop, including the body, into a multi-line comment.*/
+/*Step 97
+Now you no longer need your done variable. Remove the increment operation from your loop, and the variable declaration for done.*/
 const character = "#";
 const count = 8;
 const rows = [];
@@ -16,6 +12,10 @@ function padRow(rowNumber, rowCount) {
 /*for (let i = 1; i <= count; i++) {
   rows.push(padRow(i, count));
 }*/
+
+while (rows.length < count) {
+    rows.push(padRow(rows.length + 1, count));
+}
 
 let result = ""
 

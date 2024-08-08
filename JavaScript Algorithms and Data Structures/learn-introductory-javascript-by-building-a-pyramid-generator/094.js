@@ -1,9 +1,9 @@
-/*Step 77
-JavaScript also has support for multi-line comments. A multi-line comment starts with / * and ends with * /.
+/*Step 94
+Your pyramid generator is still working. However, it could be possible to end up with an infinite loop again.
 
-Unlike a single-line comment, a multi-line comment will encapsulate multiple lines.
+Because you are only checking if done is not equal to count, if done were to be larger than count your loop would go on forever.
 
-Use / * and * / to turn your current for loop, including the body, into a multi-line comment.*/
+Update your loop's condition to check if done is less than or equal to count.*/
 const character = "#";
 const count = 8;
 const rows = [];
@@ -16,6 +16,13 @@ function padRow(rowNumber, rowCount) {
 /*for (let i = 1; i <= count; i++) {
   rows.push(padRow(i, count));
 }*/
+
+let done = 0;
+
+while (done <= count) {
+    done++;
+    rows.push(padRow(done, count));
+}
 
 let result = ""
 

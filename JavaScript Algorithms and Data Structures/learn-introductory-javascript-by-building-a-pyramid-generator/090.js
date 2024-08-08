@@ -1,9 +1,6 @@
-/*Step 77
-JavaScript also has support for multi-line comments. A multi-line comment starts with / * and ends with * /.
-
-Unlike a single-line comment, a multi-line comment will encapsulate multiple lines.
-
-Use / * and * / to turn your current for loop, including the body, into a multi-line comment.*/
+/*Step 90
+To make your pyramid generate again, push the result of calling padRow with done and count as the arguments to your rows array, similar to what you did in your first loop.
+*/
 const character = "#";
 const count = 8;
 const rows = [];
@@ -16,6 +13,17 @@ function padRow(rowNumber, rowCount) {
 /*for (let i = 1; i <= count; i++) {
   rows.push(padRow(i, count));
 }*/
+
+let continueLoop = false;
+let done = 0;
+
+while (continueLoop) {
+    done++;
+    rows.push(padRow(done, count));
+    if (done === count) {
+        continueLoop = false;
+    }
+}
 
 let result = ""
 

@@ -1,9 +1,7 @@
-/*Step 77
-JavaScript also has support for multi-line comments. A multi-line comment starts with / * and ends with * /.
+/*Step 79
+You'll see the string printed in the console, because true is in fact true.
 
-Unlike a single-line comment, a multi-line comment will encapsulate multiple lines.
-
-Use / * and * / to turn your current for loop, including the body, into a multi-line comment.*/
+Change the condition of your if statement to the boolean false.*/
 const character = "#";
 const count = 8;
 const rows = [];
@@ -16,6 +14,10 @@ function padRow(rowNumber, rowCount) {
 /*for (let i = 1; i <= count; i++) {
   rows.push(padRow(i, count));
 }*/
+
+if (false) {
+    console.log("Condition is true");
+}
 
 let result = ""
 
